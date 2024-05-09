@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Dropdown from "./Dropdown";
 
 const dummyActivities = [
   {
@@ -85,21 +86,12 @@ const Header = () => {
 
   return (
     <>
+    
       <header className="  p-4 flex justify-between items-center">
         <div className="text-2xl font-bold">Activity</div>
         <div className="flex space-x-4">
-          <select
-            className="bg-gray-200  px-3 py-1 rounded"
-            value={notificationType}
-            onChange={(e) => setNotificationType(e.target.value)}
-          >
-            <option value="">Notification Type</option>
-            <option value="Request rejected">Request rejected</option>
-            <option value="Inventory received">Inventory received</option>
-            <option value="Payout generated">Payout generated</option>
-            <option value="PID created">PID created</option>
-            <option value="Request accepted">Request accepted</option>
-          </select>
+        <Dropdown dummyActivities={dummyActivities} setNotificationType={setNotificationType}/>
+          
           <input
             type="date"
             className="bg-gray-200  px-3 py-1 rounded"
