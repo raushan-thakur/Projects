@@ -10,7 +10,7 @@ const Dropdown = ({dummyActivities, setNotificationType}) => {
   return (
     <div className="relative">
       <div
-        className="w-44 border border-gray-300 rounded-t-lg p-2 cursor-pointer"
+        className={"w-44 border border-gray-300 rounded-t-lg p-2 cursor-pointer "}
         onClick={toggleDropdown}
       >
         Notification Type
