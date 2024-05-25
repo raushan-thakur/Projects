@@ -5,9 +5,8 @@ const Header = () => {
   return (
     <div className="w-full h-full flex justify-center items-center p-2 text-white">
       <Link to={"/"}>
-        {" "}
         <div className=" p-3 m-2 bg-purple-800 rounded-xl">
-          <button>Home</button>
+          <button>Stopwatch</button>
         </div>
       </Link>
 
@@ -54,8 +53,14 @@ const Header = () => {
           <button>JOB</button>
         </div>
       </Link>
+      <Link to={"/login"}>
+        <div className=" p-3 m-2 bg-purple-800 rounded-xl">
+          <button>Login</button>
+        </div>
+      </Link>
     </div>
   );
 };
 
 export default Header;
+

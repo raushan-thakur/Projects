@@ -14,6 +14,9 @@ import Form from "./components/Form/Form";
 import Seller from './components/seller/Seller';
 import Emi from "./components/Emi/Emi";
 import Job from "./components/Job/Job";
+import Home from "./components/Home";
+import Login from "./components/LoginTodo/Login";
+import TodoData from "./components/LoginTodo/TodoData";
 
 const App = () => {
   // const appRouter = createBrowserRouter([
@@ -39,7 +42,7 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/"></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/seller" element={<Seller />}></Route>
           <Route path="/inventory" element={<Inventory />}></Route>
           <Route path="/todo" element={<Todo />}></Route>
@@ -48,6 +51,8 @@ const App = () => {
           <Route path="/form" element={<Form />}></Route>
           <Route path="/emi" element={<Emi />}></Route>
           <Route path="/job" element={<Job />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/login/todo" element={<TodoData />}></Route>
         </Routes>
       </BrowserRouter>
     </>
