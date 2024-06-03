@@ -18,9 +18,9 @@ const Login = () => {
         password: password,
       }),
     });
-    if(res.ok) navigate("/login/todo")
-     
-    //console.log(res);
+    //if(res.ok) navigate("/login/todo")
+      navigate("/login/todo")
+    console.log(res);
   };
   return (
     <div className="flex h-screen justify-center pt-20 border border-blue-500 p-4 m-10 rounded-lg">

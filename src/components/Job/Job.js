@@ -51,7 +51,7 @@ const fetchItems =async (currPage)=> {
           const response = await fetch(`${API_ENDPOINT}/item/${itemId}.json`);
           return await response.json();
         })
-      );
+    );
       
   
     setItems([...items, ...itemsForPage]);

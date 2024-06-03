@@ -17,6 +17,9 @@ import Job from "./components/Job/Job";
 import Home from "./components/Home";
 import Login from "./components/LoginTodo/Login";
 import TodoData from "./components/LoginTodo/TodoData";
+import TickTakToe from "./components/TicTakToe/TicTacToe";
+import Project from "./components/Card/Project";
+import Infinite from "./components/Infinite Scroll/Infinite";
 
 const App = () => {
   // const appRouter = createBrowserRouter([
@@ -53,6 +56,9 @@ const App = () => {
           <Route path="/job" element={<Job />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/login/todo" element={<TodoData />}></Route>
+          <Route path="/tic" element={<TickTakToe />}></Route>
+          <Route path="/project" element={<Project />}></Route>
+          <Route path="/infinite" element={<Infinite />}></Route>
         </Routes>
       </BrowserRouter>
     </>

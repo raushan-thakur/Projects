@@ -58,6 +58,21 @@ const Header = () => {
           <button>Login</button>
         </div>
       </Link>
+      <Link to={"/tic"}>
+        <div className=" p-3 m-2 bg-purple-800 rounded-xl">
+          <button>Tic Tac</button>
+        </div>
+      </Link>
+      <Link to={"/project"}>
+        <div className=" p-3 m-2 bg-purple-800 rounded-xl">
+          <button>Project</button>
+        </div>
+      </Link>
+      <Link to={"/infinite"}>
+        <div className=" p-3 m-2 bg-purple-800 rounded-xl">
+          <button>Infinite</button>
+        </div>
+      </Link>
     </div>
   );
 };
