@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 const Cards = ({ item, handleClick }) => (
-  <div className="flex w-[32%]  items-center flex-col border border-slate-400 rounded-lg">
-    <button className="text-blue-700" onClick={() => handleClick(item)}>
+  <div className="flex w-[32%]  items-center flex-col border border-slate-400 rounded-lg"  onClick={() => handleClick(item)}>
+    <button className="text-blue-700">
       {item.username}
     </button>
     <p>{item.email}</p>
@@ -22,6 +22,9 @@ const Project = () => {
   };
 
   const handleClick = (items) => setCardData(items);
+  const handleBackClick = () =>{
+    setCardData(null);
+  }
 
   useEffect(() => {
     fetchData();
@@ -35,6 +38,7 @@ const Project = () => {
       {cardData ? (
         <div className="flex justify-center">
           <div className="text-center ">
+            <div className="p-2 border rounded-lg" onClick={handleBackClick}> 🔙</div>
             <button className="text-blue-700">{cardData.username}</button>
             <p>{cardData.email}</p>
             <p>{cardData.phone}</p>

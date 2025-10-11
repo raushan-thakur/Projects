@@ -73,9 +73,13 @@ const Header = () => {
           <button>Infinite</button>
         </div>
       </Link>
+      <Link to={"/currency"}>
+        <div className=" p-3 m-2 bg-purple-800 rounded-xl">
+          <button>Currency</button>
+        </div>
+      </Link>
     </div>
   );
 };
 
 export default Header;
-

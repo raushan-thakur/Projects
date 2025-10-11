@@ -13,7 +13,7 @@ const Home = () => {
       }, 1000);
     }
     return () => clearInterval(interval);
-  });
+  }, [isRunning]);
 
   const handleStart = () => {
     setIsRunning(true);
@@ -80,3 +80,52 @@ const Home = () => {
 }
 
 export default Home;
+
+// import React, { useState, useEffect } from "react";
+
+// export default function Home() {
+//   const [time, setTime] = useState(0);       // timer value
+//   const [isRunning, setIsRunning] = useState(false); // play/pause state
+
+//   useEffect(() => {
+//     let interval;
+//     if (isRunning) {
+//       interval = setInterval(() => {
+//         setTime((prevTime) => prevTime + 1); // increment every second
+//       }, 1000);
+//     }
+//     return () => clearInterval(interval); // cleanup
+//   }, [isRunning]);
+
+//   const handleReset = () => {
+//     setTime(0);
+//     setIsRunning(false);
+//   };
+
+//   return (
+//     <div className="flex flex-col items-center justify-center h-screen gap-4 text-xl">
+//       <h1 className="text-2xl font-bold">⏱ React Timer</h1>
+//       <p className="text-3xl">{time} sec</p>
+//       <div className="flex gap-3">
+//         <button
+//           onClick={() => setIsRunning(true)}
+//           className="px-4 py-2 bg-green-500 text-white rounded-xl shadow"
+//         >
+//           Play ▶
+//         </button>
+//         <button
+//           onClick={() => setIsRunning(false)}
+//           className="px-4 py-2 bg-yellow-500 text-white rounded-xl shadow"
+//         >
+//           Pause ⏸
+//         </button>
+//         <button
+//           onClick={handleReset}
+//           className="px-4 py-2 bg-red-500 text-white rounded-xl shadow"
+//         >
+//           Reset 🔄
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }

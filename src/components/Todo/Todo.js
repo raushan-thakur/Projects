@@ -21,7 +21,7 @@ const Todo = () => {
       return;
     }
 
-    if (todo !== "") {
+    if (todo.trim() !== "") {
       setTodos([{ id: `${todo}-${Date.now()}`, todo }, ...todos]);
       setTodo("");
     }
@@ -131,7 +131,7 @@ export default Todo;
 //     <div className="flex flex-col items-center  min-h-screen py-6 bg-gray-200">
 //       <div className="bg-white h-vh p-6 rounded-lg shadow-lg">
 //         <h1 className="text-3xl mb-4">Todo App</h1>
-//         <div className="flex">
+//         <form className="flex" onSubmit={(e) => e.preventDefault()}>
 //           <input
 //             className="w-full px-4 py-2 mr-2 rounded-lg border border-gray-300"
 //             type="text"
@@ -141,11 +141,12 @@ export default Todo;
 //           />
 //           <button
 //             className="px-4 py-2 bg-blue-500 text-white rounded-lg"
+//             type="submit"
 //             onClick={handleAddTodo}
 //           >
 //             Add
 //           </button>
-//         </div>
+//         </form>
 //         <ul className="mt-4">
 //           {todos.map((todo, index) => (
 //             <li

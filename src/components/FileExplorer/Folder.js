@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Home from '../Home';
 
 function Folder({ handleInsertNode = () => {}, explorer }) {
   const [expand, setExpand] = useState(false);

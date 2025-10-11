@@ -6,7 +6,9 @@ const TodoData = () => {
 
   const fetchData = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+    console.log(res);
     const users = await res.json();
+    console.log(users)
     setData(users);
     setDel(new Array(users.length).fill(false));
   };
@@ -40,7 +42,11 @@ const TodoData = () => {
               {!ele.completed &&  (
                 <button onClick={() => handleCompleted(ind)}>✅</button>
               )}
-              <button onClick={() => handleDelete(ind)}>🗑️</button>
+              {
+                !del[ind] && (
+                  <button onClick={() => handleDelete(ind)}>🗑️</button>
+                )
+              }
             </div>
           </div>
         );
