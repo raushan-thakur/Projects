@@ -60,22 +60,23 @@ const Todo = () => {
 
         <ul className="">
           {todos.map((t) => (
-            <li className="rounded-lg m-2 bg-slate-700  pl-4 pr-1 flex items-center justify-between w-80">
+            <li className="rounded-lg m-2 p-2 bg-slate-700  pl-4 pr-1 flex items-center justify-between w-80">
               <span className="flex-grow" key={t.id}>
                 {t.todo}
               </span>
-              <button
-                className="p-2 m-1 px-2 bg-green-700 rounded-lg"
+             {editId !== t.id && <div><button
+                className="p-2  bg-green-700 rounded-lg"
                 onClick={() => handleEdit(t.id)}
               >
                 Edit
               </button>
               <button
-                className="p-2 m-2 px-2 bg-red-700 rounded-lg"
+                className="p-2 bg-red-700 rounded-lg"
                 onClick={() => handleDelete(t.id)}
               >
                 Delete
               </button>
+              </div>}
             </li>
           ))}
         </ul>
