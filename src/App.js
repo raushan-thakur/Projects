@@ -23,6 +23,7 @@ import Carousel from "./components/Carousel/carousel"
 import Cart from "./components/Cart/Cart"
 import FlipkartCart from "./components/Cart/flipkartCart"
 import EmployeePage from "./components/Question/EmployeePage";
+import App1 from "./components/Context/App1";
 
 const App = () => {
   // const appRouter = createBrowserRouter([
@@ -69,6 +70,7 @@ const App = () => {
           <Route path="/cart" element={<Cart/>}></Route>
           <Route path="/flipkart" element={<FlipkartCart/>}></Route>
           <Route path="/employee" element={<EmployeePage/>}></Route>
+          <Route path="/app1" element={<App1/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -33,7 +33,8 @@ const ProductList = ({ onAdd }) => {
 
 // Cart Component
 const Carts = ({ cartItems, onAdd, onRemove }) => {
-  const total = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
+  let total = 0;
+  cartItems.map((item) => (total += item.price * item.qty));
 
   return (
     <div className="p-4 border-l h-full">
@@ -105,12 +106,12 @@ export default function Cart() {
   };
 
   return (
-    <div className="flex h-screen">
-      <div className="flex-1">
+    <div className="grid grid-cols-3 h-screen">
+      <div className="col-span-2">
         <h1 className="text-2xl font-bold p-4">🛍️ Product Store</h1>
         <ProductList onAdd={handleAdd} />
       </div>
-      <div className="w-1/3 bg-gray-50">
+      <div className="col-span-1 bg-gray-50">
         <Carts cartItems={cartItems} onAdd={handleAdd} onRemove={handleRemove} />
       </div>
     </div>
