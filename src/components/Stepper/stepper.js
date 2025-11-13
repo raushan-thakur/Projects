@@ -7,7 +7,7 @@ const steps = ["Cart", "Address", "Payment", "Order Placed"];
 function fetchOrderStatus() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve({ orderId: "12345", status: "PAYMENT_PENDING" });
+      resolve({ orderId: "12345", status: "ADDRESS_SAVED" });
     }, 1000); // simulate API delay
   });
 }

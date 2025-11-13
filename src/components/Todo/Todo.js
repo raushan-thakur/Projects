@@ -64,19 +64,22 @@ const Todo = () => {
               <span className="flex-grow" key={t.id}>
                 {t.todo}
               </span>
-             {editId !== t.id && <div><button
-                className="p-2  bg-green-700 rounded-lg"
-                onClick={() => handleEdit(t.id)}
-              >
-                Edit
-              </button>
-              <button
-                className="p-2 bg-red-700 rounded-lg"
-                onClick={() => handleDelete(t.id)}
-              >
-                Delete
-              </button>
-              </div>}
+              {editId !== t.id && (
+                <div>
+                  <button
+                    className="p-2  bg-green-700 rounded-lg"
+                    onClick={() => handleEdit(t.id)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="p-2 bg-red-700 rounded-lg"
+                    onClick={() => handleDelete(t.id)}
+                  >
+                    Delete
+                  </button>
+                </div>
+              )}
             </li>
           ))}
         </ul>
@@ -86,9 +89,6 @@ const Todo = () => {
 };
 
 export default Todo;
-
-
-
 
 // import React, { useState } from 'react';
 

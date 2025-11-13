@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleSumit = async () => {
     const res = await fetch("https://dummyjson.com/auth/login", {
-      method: 'POST',
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -18,8 +18,10 @@ const Login = () => {
         password: password,
       }),
     });
+    const data = await res.json();
+    console.log(data);
     //if(res.ok) navigate("/login/todo")
-      navigate("/login/todo")
+    navigate("/login/todo");
     console.log(res);
   };
   return (

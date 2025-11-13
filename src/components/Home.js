@@ -55,18 +55,18 @@ const Home = () => {
         <h1 onClick={handleTheme}> {isDark? "Light" : "Dark"}</h1>
         <p>{formatTime(time)}</p>
         <div>
-          <button
+          {!isRunning && <button
             className="p-2 px-4 gap-2 m-2 bg-purple-900 rounded-full text-white cursor-pointer border"
             onClick={handleStart}
           >
             Start
-          </button>
-          <button
+          </button>}
+          {isRunning && <button
             className="p-2 px-4 gap-2 m-2 bg-purple-900 rounded-full text-white cursor-pointer"
             onClick={handleStop}
           >
             Stop
-          </button>
+          </button>}
           <button
             className="p-2 px-4 gap-2 m-2 bg-purple-900 rounded-full text-white cursor-pointer"
             onClick={handleRestart}

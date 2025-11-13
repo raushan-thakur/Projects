@@ -24,6 +24,8 @@ import Cart from "./components/Cart/Cart"
 import FlipkartCart from "./components/Cart/flipkartCart"
 import EmployeePage from "./components/Question/EmployeePage";
 import App1 from "./components/Context/App1";
+import Timer from "./components/Timer/Timer";
+import Multiform from "./components/MultiForm/Multiform";
 
 const App = () => {
   // const appRouter = createBrowserRouter([
@@ -71,6 +73,8 @@ const App = () => {
           <Route path="/flipkart" element={<FlipkartCart/>}></Route>
           <Route path="/employee" element={<EmployeePage/>}></Route>
           <Route path="/app1" element={<App1/>}></Route>
+          <Route path="/timer" element={<Timer/>}></Route>
+          <Route path="/multiform" element={<Multiform />}></Route>
         </Routes>
       </BrowserRouter>
     </>
