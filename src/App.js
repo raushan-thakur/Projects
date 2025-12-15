@@ -26,6 +26,9 @@ import EmployeePage from "./components/Question/EmployeePage";
 import App1 from "./components/Context/App1";
 import Timer from "./components/Timer/Timer";
 import Multiform from "./components/MultiForm/Multiform";
+import Paginate from "./components/Pagination/Paginate";
+import Grid from './components/Grid/Grid';
+import NestedComments from "./components/Nested Comments/NestedComments";
 
 const App = () => {
   // const appRouter = createBrowserRouter([
@@ -56,6 +59,7 @@ const App = () => {
           <Route path="/inventory" element={<Inventory />}></Route>
           <Route path="/todo" element={<Todo />}></Route>
           <Route path="/pagination" element={<Pagination />}></Route>
+          <Route path="/paginate" element={<Paginate />}></Route>
           <Route path="/file" element={<FileExplorer />}></Route>
           <Route path="/form" element={<Form />}></Route>
           <Route path="/emi" element={<Emi />}></Route>
@@ -75,6 +79,8 @@ const App = () => {
           <Route path="/app1" element={<App1/>}></Route>
           <Route path="/timer" element={<Timer/>}></Route>
           <Route path="/multiform" element={<Multiform />}></Route>
+          <Route path="/grid" element={<Grid />} ></Route>
+          <Route path="/comments" element={<NestedComments />} />
         </Routes>
       </BrowserRouter>
     </>
