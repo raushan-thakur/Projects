@@ -29,6 +29,7 @@ import Multiform from "./components/MultiForm/Multiform";
 import Paginate from "./components/Pagination/Paginate";
 import Grid from './components/Grid/Grid';
 import NestedComments from "./components/Nested Comments/NestedComments";
+import Practice from "./components/Practice";
 
 const App = () => {
   // const appRouter = createBrowserRouter([
@@ -81,6 +82,7 @@ const App = () => {
           <Route path="/multiform" element={<Multiform />}></Route>
           <Route path="/grid" element={<Grid />} ></Route>
           <Route path="/comments" element={<NestedComments />} />
+          <Route path="/practice" element={<Practice />} />
         </Routes>
       </BrowserRouter>
     </>

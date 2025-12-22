@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f7fa;
+}
+
+/* App wrapper */
+.App {
+  width: 400px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.App h1 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+/* File tree container */
+.container {
+  padding-left: 12px;
+}
+
+/* Each node */
+.container > div {
+  margin: 4px 0;
+}
+
+/* Folder & file row */
+.container span {
+  margin-right: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Folder hover effect */
+.container span:hover {
+  color: #2563eb;
+}
+
+/* Icons */
+.icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+/* Indentation for nested folders */
+.container .container {
+  margin-left: 16px;
+  border-left: 1px dashed #d1d5db;
+  padding-left: 10px;
+}
+
+.node {
+    display : flex;
+    padding: 2px;
+}
